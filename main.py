@@ -20,7 +20,7 @@ def eye_aspect_ratio(landmarks, eye_indices, frame_shape):
     p3_minus_p5 = euclidean_dist(eye[2], eye[4])
     p1_minus_p4 = euclidean_dist(eye[0], eye[3])
     return (p2_minus_p6 + p3_minus_p5) / (2.0 * p1_minus_p4)
-
+# source https://medium.com/analytics-vidhya/eye-aspect-ratio-ear-and-drowsiness-detector-using-dlib-a0b2c292d706
 # Sleep tracking state
 asleep = False
 sleep_start_time = None
@@ -74,3 +74,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
